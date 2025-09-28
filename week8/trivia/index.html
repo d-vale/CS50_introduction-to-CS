@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // Wait for DOM content to load
+            document.addEventListener('DOMContentLoaded', function() {
+
+                // PART 1: Multiple choice questions
+                // Select all buttons with "correct" class
+                let correctButtons = document.querySelectorAll('.correct');
+                for (let i = 0; i < correctButtons.length; i++) {
+                    correctButtons[i].addEventListener('click', function() {
+                        // Change color to green
+                        correctButtons[i].style.backgroundColor = 'green';
+                        correctButtons[i].style.color = 'white';
+                        // Display feedback message
+                        correctButtons[i].parentElement.querySelector('.feedback').innerHTML = 'Correct!';
+                        correctButtons[i].parentElement.querySelector('.feedback').style.color = 'green';
+                        correctButtons[i].parentElement.querySelector('.feedback').style.fontWeight = 'bold';
+                    });
+                }
+
+                // Select all buttons with "incorrect" class
+                let incorrectButtons = document.querySelectorAll('.incorrect');
+                for (let i = 0; i < incorrectButtons.length; i++) {
+                    incorrectButtons[i].addEventListener('click', function() {
+                        // Change color to red
+                        incorrectButtons[i].style.backgroundColor = 'red';
+                        incorrectButtons[i].style.color = 'white';
+                        // Display feedback message
+                        incorrectButtons[i].parentElement.querySelector('.feedback').innerHTML = 'Incorrect';
+                        incorrectButtons[i].parentElement.querySelector('.feedback').style.color = 'red';
+                        incorrectButtons[i].parentElement.querySelector('.feedback').style.fontWeight = 'bold';
+                    });
+                }
+
+                // PART 2: Free response question
+                document.querySelector('#check').addEventListener('click', function() {
+                    let input = document.querySelector('#free-response');
+                    let userAnswer = input.value.trim().toLowerCase();
+                    let correctAnswer = 'rome';
+
+                    if (userAnswer === correctAnswer) {
+                        // Correct answer
+                        input.style.backgroundColor = 'lightgreen';
+                        document.querySelector('#feedback-free').innerHTML = 'Correct!';
+                        document.querySelector('#feedback-free').style.color = 'green';
+                        document.querySelector('#feedback-free').style.fontWeight = 'bold';
+                    } else {
+                        // Incorrect answer
+                        input.style.backgroundColor = 'lightcoral';
+                        document.querySelector('#feedback-free').innerHTML = 'Incorrect';
+                        document.querySelector('#feedback-free').style.color = 'red';
+                        document.querySelector('#feedback-free').style.fontWeight = 'bold';
+                    }
+                });
+
+                // Allow validation with Enter key for free response
+                document.querySelector('#free-response').addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        document.querySelector('#check').click();
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- Multiple choice question -->
+                <h3>What is the capital of France?</h3>
+                <button class="incorrect">London</button>
+                <button class="incorrect">Berlin</button>
+                <button class="correct">Paris</button>
+                <button class="incorrect">Madrid</button>
+                <p class="feedback"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- Free response question -->
+                <h3>What is the capital of Italy?</h3>
+                <input type="text" id="free-response" placeholder="Type your answer...">
+                <button id="check">Check Answer</button>
+                <p id="feedback-free"></p>
+            </div>
+        </div>
+    </body>
+
+</html>
