@@ -2,7 +2,7 @@
 
 [![CS50x](https://img.shields.io/badge/CS50x-Harvard-crimson)](https://cs50.harvard.edu/x/2025/)
 [![edX](https://img.shields.io/badge/Platform-edX-blue)](https://learning.edx.org/course/course-v1:HarvardX+CS50+X/home)
-[![Progress](https://img.shields.io/badge/Progress-80%25-green)](#progression)
+[![Progress](https://img.shields.io/badge/Progress-90%25-green)](#progression)
 
 ## 📖 À propos
 
@@ -66,16 +66,18 @@ Développement d'un projet personnel intégrant les compétences acquises, prés
 
 ### ✅ Semaines terminées
 
-| Semaine    | Sujet                 | Exercices réalisés                                                                                                                                 | Statut     |
-| ---------- | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
-| **Week 0** | Scratch               | Projet Scratch (non inclus dans le repo)                                                                                                           | ✅ Terminé |
-| **Week 1** | Langage C             | [`hello.c`](week1/hello.c), [`mario.c`](week1/mario.c), [`credit.c`](week1/credit.c)                                                               | ✅ Terminé |
-| **Week 2** | Arrays                | [`scrabble.c`](week2/scrabble.c), [`readability.c`](week2/readability.c), [`substitution.c`](week2/substitution.c)                                 | ✅ Terminé |
-| **Week 3** | Algorithmes           | [`sort/answers.txt`](week3/sort/answers.txt), [`plurality.c`](week3/plurality.c), [`runoff.c`](week3/runoff.c)                                     | ✅ Terminé |
-| **Week 4** | Mémoire               | [`filter-less/helpers.c`](week4/filter-less/helpers.c), [`recover/recover.c`](week4/recover/recover.c), [`volume/volume.c`](week4/volume/volume.c) | ✅ Terminé |
-| **Week 5** | Structures de données | [`inheritance/inheritance.c`](week5/inheritance/inheritance.c), [`speller/dictionary.c`](week5/speller/dictionary.c)                               | ✅ Terminé |
+| Semaine    | Sujet                 | Exercices réalisés                                                                                                                                                                                                                                                                                                                             | Statut     |
+| ---------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| **Week 0** | Scratch               | Projet Scratch (non inclus dans le repo)                                                                                                                                                                                                                                                                                                       | ✅ Terminé |
+| **Week 1** | Langage C             | [`hello.c`](week1/hello.c), [`mario.c`](week1/mario.c), [`credit.c`](week1/credit.c)                                                                                                                                                                                                                                                           | ✅ Terminé |
+| **Week 2** | Arrays                | [`scrabble.c`](week2/scrabble.c), [`readability.c`](week2/readability.c), [`substitution.c`](week2/substitution.c)                                                                                                                                                                                                                             | ✅ Terminé |
+| **Week 3** | Algorithmes           | [`sort/answers.txt`](week3/sort/answers.txt), [`plurality.c`](week3/plurality.c), [`runoff.c`](week3/runoff.c)                                                                                                                                                                                                                                 | ✅ Terminé |
+| **Week 4** | Mémoire               | [`filter-less/helpers.c`](week4/filter-less/helpers.c), [`recover/recover.c`](week4/recover/recover.c), [`volume/volume.c`](week4/volume/volume.c)                                                                                                                                                                                             | ✅ Terminé |
+| **Week 5** | Structures de données | [`inheritance/inheritance.c`](week5/inheritance/inheritance.c), [`speller/dictionary.c`](week5/speller/dictionary.c)                                                                                                                                                                                                                           | ✅ Terminé |
 | **Week 6** | Python                | [`sentimental-hello/hello.py`](week6/sentimental-hello/hello.py), [`sentimental-mario-more/mario.py`](week6/sentimental-mario-more/mario.py), [`sentimental-credit/credit.py`](week6/sentimental-credit/credit.py), [`sentimental-readability/readability.py`](week6/sentimental-readability/readability.py), [`dna/dna.py`](week6/dna/dna.py) | ✅ Terminé |
-| **Week 7** | SQL                   | [`songs/`](week7/songs/), [`movies/`](week7/movies/), [`fiftyville/`](week7/fiftyville/) | ✅ Terminé |
+| **Week 7** | SQL                   | [`songs/`](week7/songs/), [`movies/`](week7/movies/), [`fiftyville/`](week7/fiftyville/)                                                                                                                                                                                                                                                       | ✅ Terminé |
+| **Week 8** | Web Frontend          | [`homepage/`](week8/homepage/), [`trivia/`](week8/trivia/)                                                                                                                                                                                                                                                                                     | ✅ Terminé |
+| **Week 9** | Web Backend           | [`birthdays/`](week9/birthdays/), [`finance/`](week9/finance/)                                                                                                                                                                                                                                                                                 | ✅ Terminé |
 
 ## 🛠️ Détail des exercices
 
@@ -140,23 +142,41 @@ Développement d'un projet personnel intégrant les compétences acquises, prés
 
 **📝 Problem Set :** [https://cs50.harvard.edu/x/2025/psets/6/](https://cs50.harvard.edu/x/2025/psets/6/)
 
-| Exercice              | Description                                                              | Fichier                                                                     | Difficulté |
-| --------------------- | ------------------------------------------------------------------------ | --------------------------------------------------------------------------- | ---------- |
-| **Hello (Python)**   | Version Python du programme de salutation avec syntaxe simplifiée        | [`sentimental-hello/hello.py`](week6/sentimental-hello/hello.py)           | ⭐         |
-| **Mario (Python)**   | Pyramides adjacentes en Python avec validation d'entrée et fonctions     | [`sentimental-mario-more/mario.py`](week6/sentimental-mario-more/mario.py) | ⭐⭐       |
-| **Credit (Python)**  | Validation de cartes de crédit en Python avec algorithme de Luhn          | [`sentimental-credit/credit.py`](week6/sentimental-credit/credit.py)       | ⭐⭐       |
-| **Readability**      | Index de lisibilité Coleman-Liau en Python avec manipulation de chaînes   | [`sentimental-readability/readability.py`](week6/sentimental-readability/readability.py) | ⭐⭐       |
-| **DNA**              | Profilage génétique avec séquences STR et analyse de fichiers CSV         | [`dna/dna.py`](week6/dna/dna.py)                                           | ⭐⭐⭐     |
+| Exercice            | Description                                                             | Fichier                                                                                  | Difficulté |
+| ------------------- | ----------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------- |
+| **Hello (Python)**  | Version Python du programme de salutation avec syntaxe simplifiée       | [`sentimental-hello/hello.py`](week6/sentimental-hello/hello.py)                         | ⭐         |
+| **Mario (Python)**  | Pyramides adjacentes en Python avec validation d'entrée et fonctions    | [`sentimental-mario-more/mario.py`](week6/sentimental-mario-more/mario.py)               | ⭐⭐       |
+| **Credit (Python)** | Validation de cartes de crédit en Python avec algorithme de Luhn        | [`sentimental-credit/credit.py`](week6/sentimental-credit/credit.py)                     | ⭐⭐       |
+| **Readability**     | Index de lisibilité Coleman-Liau en Python avec manipulation de chaînes | [`sentimental-readability/readability.py`](week6/sentimental-readability/readability.py) | ⭐⭐       |
+| **DNA**             | Profilage génétique avec séquences STR et analyse de fichiers CSV       | [`dna/dna.py`](week6/dna/dna.py)                                                         | ⭐⭐⭐     |
 
 ### Week 7 - SQL
 
 **📝 Problem Set :** [https://cs50.harvard.edu/x/2025/psets/7/](https://cs50.harvard.edu/x/2025/psets/7/)
 
-| Exercice     | Description                                                                    | Fichier                           | Difficulté |
-| ------------ | ------------------------------------------------------------------------------ | --------------------------------- | ---------- |
-| **Songs**    | Requêtes SQL sur une base de données Spotify (top songs, artists, etc.)       | [`songs/`](week7/songs/)          | ⭐⭐       |
-| **Movies**   | Requêtes complexes sur une base de données IMDb (films, acteurs, ratings)     | [`movies/`](week7/movies/)        | ⭐⭐⭐     |
-| **Fiftyville** | Enquête de détective utilisant SQL pour résoudre un mystère                 | [`fiftyville/`](week7/fiftyville/) | ⭐⭐⭐     |
+| Exercice       | Description                                                               | Fichier                            | Difficulté |
+| -------------- | ------------------------------------------------------------------------- | ---------------------------------- | ---------- |
+| **Songs**      | Requêtes SQL sur une base de données Spotify (top songs, artists, etc.)   | [`songs/`](week7/songs/)           | ⭐⭐       |
+| **Movies**     | Requêtes complexes sur une base de données IMDb (films, acteurs, ratings) | [`movies/`](week7/movies/)         | ⭐⭐⭐     |
+| **Fiftyville** | Enquête de détective utilisant SQL pour résoudre un mystère               | [`fiftyville/`](week7/fiftyville/) | ⭐⭐⭐     |
+
+### Week 8 - Web Frontend
+
+**📝 Problem Set :** [https://cs50.harvard.edu/x/2025/psets/8/](https://cs50.harvard.edu/x/2025/psets/8/)
+
+| Exercice     | Description                                                             | Fichier                        | Difficulté |
+| ------------ | ----------------------------------------------------------------------- | ------------------------------ | ---------- |
+| **Homepage** | Site web personnel responsive avec HTML5, CSS3, JavaScript et Bootstrap | [`homepage/`](week8/homepage/) | ⭐⭐       |
+| **Trivia**   | Quiz interactif avec questions à choix multiple et réponses libres      | [`trivia/`](week8/trivia/)     | ⭐⭐       |
+
+### Week 9 - Web Backend
+
+**📝 Problem Set :** [https://cs50.harvard.edu/x/2025/psets/9/](https://cs50.harvard.edu/x/2025/psets/9/)
+
+| Exercice      | Description                                                                     | Fichier                          | Difficulté |
+| ------------- | ------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| **Birthdays** | Application web Flask pour gérer une liste d'anniversaires avec base de données | [`birthdays/`](week9/birthdays/) | ⭐⭐       |
+| **Finance**   | Application de trading boursier avec authentification, portfolio et historique  | [`finance/`](week9/finance/)     | ⭐⭐⭐     |
 
 ## 🔗 Ressources
 
@@ -214,6 +234,25 @@ Développement d'un projet personnel intégrant les compétences acquises, prés
 - **Analyse de données** : Filtrage complexe, tri multi-critères
 - **Conception de schémas** : Relations tables, clés primaires/étrangères
 - **Optimisation** : Index, performance des requêtes
+
+### Développement web Frontend
+
+- **HTML5 moderne** : Sémantique, accessibility, validation W3C
+- **CSS3 avancé** : Flexbox, Grid, animations, responsive design
+- **JavaScript interactif** : DOM manipulation, événements, validation formulaires
+- **Bootstrap Framework** : Composants, système de grille, responsive utilities
+- **Design UX/UI** : Interface utilisateur, expérience utilisateur, transitions
+- **Optimisation web** : Performance, compatibilité navigateurs
+
+### Développement web Backend
+
+- **Framework Flask** : Routes, templates, gestion d'erreurs
+- **Base de données web** : SQLite, requêtes dynamiques, sécurité injection SQL
+- **Authentification** : Sessions, cookies, hachage de mots de passe
+- **Sécurité web** : Validation côté serveur, protection CSRF, sanitisation
+- **APIs et intégration** : Requêtes HTTP, parsing JSON, services externes
+- **Architecture MVC** : Séparation logique, templates Jinja2, modularité
+- **Déploiement** : Configuration serveur, gestion d'environnements
 
 ---
 
