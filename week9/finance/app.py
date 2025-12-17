@@ -21,8 +21,6 @@ Session(app)
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///finance.db")
 
-# Note: API key configuration is handled by the CS50 environment
-
 
 @app.after_request
 def after_request(response):
@@ -37,95 +35,21 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-
-    # Get user's stocks and shares
-    stocks = db.execute("""
-        SELECT symbol, SUM(shares) as total_shares
-        FROM transactions
-        WHERE user_id = ?
-        GROUP BY symbol
-        HAVING total_shares > 0
-    """, session["user_id"])
-
-    # Get user's cash
-    cash = db.execute("SELECT cash FROM users WHERE id = ?",
-                      session["user_id"])[0]["cash"]
-
-    # Add current price and total value for each stock
-    total_value = cash
-    for stock in stocks:
-        quote = lookup(stock["symbol"])
-        stock["name"] = quote["name"]
-        stock["price"] = quote["price"]
-        stock["value"] = stock["price"] * stock["total_shares"]
-        total_value += stock["value"]
-
-    return render_template("index.html", stocks=stocks, cash=cash, total_value=total_value)
+    return apology("TODO")
 
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
 def buy():
     """Buy shares of stock"""
-
-    if request.method == "POST":
-        symbol = request.form.get("symbol")
-        shares = request.form.get("shares")
-
-        # Validate symbol
-        if not symbol:
-            return apology("must provide symbol", 400)
-
-        # Validate shares
-        if not shares or not shares.isdigit() or int(shares) <= 0:
-            return apology("must provide positive integer for shares", 400)
-
-        shares = int(shares)
-        quote = lookup(symbol)
-
-        if quote is None:
-            return apology("invalid symbol", 400)
-
-        # Calculate cost
-        cost = shares * quote["price"]
-
-        # Get user's cash
-        cash = db.execute("SELECT cash FROM users WHERE id = ?",
-                          session["user_id"])[0]["cash"]
-
-        if cash < cost:
-            return apology("can't afford", 400)
-
-        # Update user's cash
-        db.execute("UPDATE users SET cash = cash - ? WHERE id = ?",
-                   cost, session["user_id"])
-
-        # Add transaction
-        db.execute("""
-            INSERT INTO transactions (user_id, symbol, shares, price)
-            VALUES (?, ?, ?, ?)
-        """, session["user_id"], quote["symbol"], shares, quote["price"])
-
-        flash("Bought!")
-        return redirect("/")
-
-    else:
-        return render_template("buy.html")
+    return apology("TODO")
 
 
 @app.route("/history")
 @login_required
 def history():
     """Show history of transactions"""
-
-    transactions = db.execute("""
-        SELECT symbol, shares, price, timestamp
-        FROM transactions
-        WHERE user_id = ?
-        ORDER BY timestamp DESC
-    """, session["user_id"])
-
-    return render_template("history.html", transactions=transactions)
+    return apology("TODO")
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -147,8 +71,7 @@ def login():
 
         # Query database for username
         rows = db.execute(
-            "SELECT * FROM users WHERE username = ?", request.form.get(
-                "username")
+            "SELECT * FROM users WHERE username = ?", request.form.get("username")
         )
 
         # Ensure username exists and password is correct
@@ -183,123 +106,17 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
-
-    if request.method == "POST":
-        symbol = request.form.get("symbol")
-
-        if not symbol:
-            return apology("must provide symbol", 400)
-
-        quote = lookup(symbol)
-
-        if quote is None:
-            return apology("invalid symbol", 400)
-
-        return render_template("quoted.html", quote=quote)
-
-    else:
-        return render_template("quote.html")
+    return apology("TODO")
 
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
-
-    if request.method == "POST":
-        username = request.form.get("username")
-        password = request.form.get("password")
-        confirmation = request.form.get("confirmation")
-
-        # Validate input
-        if not username:
-            return apology("must provide username", 400)
-
-        if not password:
-            return apology("must provide password", 400)
-
-        if not confirmation:
-            return apology("must provide password confirmation", 400)
-
-        if password != confirmation:
-            return apology("passwords do not match", 400)
-
-        # Try to insert new user
-        try:
-            user_id = db.execute(
-                "INSERT INTO users (username, hash) VALUES (?, ?)",
-                username, generate_password_hash(password)
-            )
-        except ValueError:
-            return apology("username already exists", 400)
-
-        # Log user in
-        session["user_id"] = user_id
-
-        flash("Registered!")
-        return redirect("/")
-
-    else:
-        return render_template("register.html")
+    return apology("TODO")
 
 
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
     """Sell shares of stock"""
-
-    if request.method == "POST":
-        symbol = request.form.get("symbol")
-        shares = request.form.get("shares")
-
-        # Validate input
-        if not symbol:
-            return apology("must provide symbol", 400)
-
-        if not shares or not shares.isdigit() or int(shares) <= 0:
-            return apology("must provide positive integer for shares", 400)
-
-        shares = int(shares)
-
-        # Check if user owns the stock
-        stock = db.execute("""
-            SELECT SUM(shares) as total_shares
-            FROM transactions
-            WHERE user_id = ? AND symbol = ?
-            GROUP BY symbol
-        """, session["user_id"], symbol)
-
-        if len(stock) != 1 or stock[0]["total_shares"] < shares:
-            return apology("too many shares", 400)
-
-        # Get current price
-        quote = lookup(symbol)
-        if quote is None:
-            return apology("invalid symbol", 400)
-
-        # Calculate sale value
-        sale_value = shares * quote["price"]
-
-        # Update user's cash
-        db.execute("UPDATE users SET cash = cash + ? WHERE id = ?",
-                   sale_value, session["user_id"])
-
-        # Add transaction (negative shares for sale)
-        db.execute("""
-            INSERT INTO transactions (user_id, symbol, shares, price)
-            VALUES (?, ?, ?, ?)
-        """, session["user_id"], quote["symbol"], -shares, quote["price"])
-
-        flash("Sold!")
-        return redirect("/")
-
-    else:
-        # Get user's stocks for dropdown
-        stocks = db.execute("""
-            SELECT symbol
-            FROM transactions
-            WHERE user_id = ?
-            GROUP BY symbol
-            HAVING SUM(shares) > 0
-        """, session["user_id"])
-
-        return render_template("sell.html", stocks=stocks)
+    return apology("TODO")

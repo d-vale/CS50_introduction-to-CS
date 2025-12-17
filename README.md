@@ -2,7 +2,7 @@
 
 [![CS50x](https://img.shields.io/badge/CS50x-Harvard-crimson)](https://cs50.harvard.edu/x/2025/)
 [![edX](https://img.shields.io/badge/Platform-edX-blue)](https://learning.edx.org/course/course-v1:HarvardX+CS50+X/home)
-[![Progress](https://img.shields.io/badge/Progress-90%25-green)](#progression)
+[![Progress](https://img.shields.io/badge/Progress-100%25-brightgreen)](#progression)
 
 ## 📖 À propos
 
@@ -167,7 +167,7 @@ Développement d'un projet personnel intégrant les compétences acquises, prés
 | Exercice     | Description                                                             | Fichier                        | Difficulté |
 | ------------ | ----------------------------------------------------------------------- | ------------------------------ | ---------- |
 | **Homepage** | Site web personnel responsive avec HTML5, CSS3, JavaScript et Bootstrap | [`homepage/`](week8/homepage/) | ⭐⭐       |
-| **Trivia**   | Quiz interactif avec questions à choix multiple et réponses libres      | [`trivia/`](week8/trivia/)     | ⭐⭐       |
+| **Trivia**   | Quiz interactif avec questions à choix multiple et réponses libres      | [`trivia/`](week8/trivia/)     | ⭐⭐⭐       |
 
 ### Week 9 - Web Backend
 
@@ -256,4 +256,4 @@ Développement d'un projet personnel intégrant les compétences acquises, prés
 
 ---
 
-_Dernière mise à jour : Septembre 2025_
+_Dernière mise à jour : Décembre 2025_
