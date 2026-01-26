@@ -78,6 +78,7 @@ Développement d'un projet personnel intégrant les compétences acquises, prés
 | **Week 7** | SQL                   | [`songs/`](week7/songs/), [`movies/`](week7/movies/), [`fiftyville/`](week7/fiftyville/)                                                                                                                                                                                                                                                       | ✅ Terminé |
 | **Week 8** | Web Frontend          | [`homepage/`](week8/homepage/), [`trivia/`](week8/trivia/)                                                                                                                                                                                                                                                                                     | ✅ Terminé |
 | **Week 9** | Web Backend           | [`birthdays/`](week9/birthdays/), [`finance/`](week9/finance/)                                                                                                                                                                                                                                                                                 | ✅ Terminé |
+| **Week 10** | Projet final         | [Frontend](https://github.com/d-vale/track-front), [Backend](https://github.com/K-sel/track-api)                                                                                                                                                                                                                                               | ✅ Terminé |
 
 ## 🛠️ Détail des exercices
 
@@ -178,6 +179,14 @@ Développement d'un projet personnel intégrant les compétences acquises, prés
 | **Birthdays** | Application web Flask pour gérer une liste d'anniversaires avec base de données | [`birthdays/`](week9/birthdays/) | ⭐⭐       |
 | **Finance**   | Application de trading boursier avec authentification, portfolio et historique  | [`finance/`](week9/finance/)     | ⭐⭐⭐     |
 
+### Week 10 - Projet final
+
+**📝 Final Project :** [https://cs50.harvard.edu/x/2025/project/](https://cs50.harvard.edu/x/2025/project/)
+
+| Projet    | Description                                                                          | Repositories                                                                                           | Difficulté |
+| --------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ---------- |
+| **Track** | Application full-stack de suivi d'activités                   | [Frontend](https://github.com/d-vale/track-front), [Backend](https://github.com/K-sel/track-api)       | ⭐⭐⭐     |
+
 ## 🔗 Ressources
 
 - [**Cours CS50x 2025**](https://cs50.harvard.edu/x/2025/) - Site officiel
@@ -256,4 +265,4 @@ Développement d'un projet personnel intégrant les compétences acquises, prés
 
 ---
 
-_Dernière mise à jour : Décembre 2025_
+_Dernière mise à jour : Janvier 2026_
